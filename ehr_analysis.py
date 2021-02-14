@@ -63,7 +63,7 @@ There are 4 for loops in this function which equates to o(4n), in big O notation
 o(n) as the computational complexity."""
 
 
-
+# Returns a list of patient ages. 
 def load_patients (filename):
     from datetime import datetime
     from datetime import date
@@ -119,4 +119,4 @@ def num_older_than(patientages, age):
     return oldagecounter
         
 patientages = load_patients("PatientCorePopulatedTable.txt")
-print(num_older_than(patientages, 51.2))
+print(num_older_than(patientages, 70))
