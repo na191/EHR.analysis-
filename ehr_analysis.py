@@ -57,6 +57,7 @@ def sick_patients(lab_data, lab, gt_lt, value):
     return matchinglabid
 
 
+<<<<<<< HEAD
 labdata = load_labs("labcorepopulatedtest.txt")
 #print(lab_data_ex['2006-10-13 16:27:58.243'])
 #print(sick_patients(labdata, 20, ">", 4.0 ))
@@ -70,6 +71,10 @@ def load_patients(filename):
     There are 4 for loops in this function which equates to o(4n), in big
     O notation, the constant cancels out leaving
     o(n) as the computational complexity."""
+=======
+# Returns a list of patient ages. 
+def load_patients (filename):
+>>>>>>> 6766e2ca858e1d207ad56b4afa2054c901436518
     from datetime import datetime
     #from datetime import date
 
@@ -129,6 +134,7 @@ the number of values greater than the age input
         if patient_age > age:
             oldagecounter = oldagecounter + 1
     return oldagecounter
+<<<<<<< HEAD
 
 
 patientages = load_patients("patientcorepopulatedtest.txt")
@@ -137,3 +143,8 @@ print(num_older_than(patientages, 70))
 
 def age_admission(patientid, filename):
     labdata = load_labs(filename)
+=======
+        
+patientages = load_patients("PatientCorePopulatedTable.txt")
+print(num_older_than(patientages, 70))
+>>>>>>> 6766e2ca858e1d207ad56b4afa2054c901436518
