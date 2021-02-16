@@ -1,5 +1,6 @@
 # EHR.analysis
-#About 
+# About 
+
 ehr_analysis is a python document meant to parse and extract certain information from electronic health records. The expected input files are table .txt files. For sick_patients, the file should be in a format similar to the file included in the test materials, and the same is expected for the fucntion num_older_than(). 
 The function sick_patients() takes the inputs: data, "string of lab name", "> or <", and an int/float. The function returns a unique list of patient ID's whose test values are above or below the given value.
 example: 
@@ -14,7 +15,7 @@ ehr_analysis.num_older_than(51.2)
 52
 ```
 
-#Setup/Installation 
+# Setup/Installation 
 ```
 import ehr_analysis
 ```
