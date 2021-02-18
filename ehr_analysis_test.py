@@ -37,8 +37,8 @@ def test_load_patients_size():
 
 
 def test_load_patients_label():
-    assert round(ehr_analysis.load_patients("patientcorepopulatedtest.txt")[
-                 0]) == 73, "date was not calculated correctly"
+    assert round(ehr_analysis.load_patients("patientcorepopulatedtest.txt").get(
+        'FB2ABB23-C9D0-4D09-8464-49BF0B982F0F')) == 73, "date was not calculated correctly"
 
 
 patientages = ehr_analysis.load_patients("patientcorepopulatedtest.txt")
@@ -88,3 +88,14 @@ def test_sick_patient_for_lab_value():
 def test_sick_patient_for_lab_type():
     with pytest.raises(ValueError) as valueerrorinfo:
         ehr_analysis.sick_patients(labdata, 20, ">", 4)
+
+
+def test_age_admin():
+    assert round(ehr_analysis.age_admission('1A40AF35-C6D4-4D46-B475-A15D84E8A9D5',
+                                            'LabsCorePopulatedTable.txt', 'PatientCorePopulatedTable.txt')) == 26, "Age calculated is incorrect"
+
+
+def test_age_admin_ID_type():
+    with pytest.raises(ValueError) as valueerrorinfo:
+        ehr_analysis.age_admission(
+            23, 'LabsCorePopulatedTable.txt', 'PatientCorePopulatedTable.txt')
