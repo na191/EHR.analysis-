@@ -14,11 +14,23 @@ example:
 ehr_analysis.num_older_than(51.2)
 52
 ```
-
+### Web Server examples(mac os)
+Sick Patients funciton: 
+http://127.0.0.1:8000/patients/sick_patients/CBC:%20NEUTROPHILS/%3E/1/
+Patient Function: 
+http://127.0.0.1:8000/patients/C54B5AAD-98E8-472D-BAA0-638D9F3BD024
+Lab Funciton:
+http://127.0.0.1:8000/patients/C54B5AAD-98E8-472D-BAA0-638D9F3BD024/lab
+Num-older-than: 
+http://127.0.0.1:8000/patients/sick_patients/CBC:%20NEUTROPHILS/%3E/1/
 ## Setup/Installation 
-There are no dependencies for this file. 
+Dependences:
 ```
-import ehr_analysis
+pip install matplotlib 
+pip install numpy 
+pip install fast api 
+pip install uvicorn
+sqllite3
 ```
 ## Test instructions 
 The test file ehr_analysis_test.py can be evaluated using pytest. Test data is included (labcorepopulatedtest.txt, patientcorepopulatedtest.txt). pytest can be run from the terminal:
